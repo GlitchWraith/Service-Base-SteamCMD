@@ -9,9 +9,9 @@ build_image:
   script:
     - docker build -t service-base-steamcmd:latest .
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-    - docker tag service-base-steamcmd:latest $CI_REGISTRY/Containers/service-base-steamcmd:latest
+    - docker tag service-base-steamcmd:latest $CI_REGISTRY/containers/service-base-steamcmd:latest
     - docker tag service-base-steamcmd:latest $docker_hub_user/service-base-steamcmd:latest
-    - docker push $CI_REGISTRY/Containers/service-base-steamcmd:latest
+    - docker push $CI_REGISTRY/containers/service-base-steamcmd:latest
     - docker login -u $docker_hub_user -p $docker_hub_api
     - docker push $docker_hub_user/service-base-steamcmd:latest
     - docker image rm service-base-steamcmd:latest

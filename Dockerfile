@@ -1,4 +1,4 @@
-LABEL org.opencontainers.image.description steamcmd base install to build gameservers off of
+LABEL org.opencontainers.image.description "steamcmd base install to build gameservers off of"
 FROM ubuntu:24.04
 
 RUN useradd -m steam

@@ -1,4 +1,3 @@
-LABEL org.opencontainers.image.description "steamcmd base install to build gameservers off of"
 FROM ubuntu:24.04
 
 RUN useradd -m steam
@@ -14,3 +13,4 @@ WORKDIR /home/steam/steamcmd
 RUN wget http://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
 RUN tar -xvzf steamcmd_linux.tar.gz && rm steamcmd_linux.tar.gz
 RUN ./steamcmd.sh +quit
+LABEL org.opencontainers.image.description "steamcmd base install to build gameservers off of"

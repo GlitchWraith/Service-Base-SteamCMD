@@ -1,7 +1,7 @@
-FROM ubuntu:latest
+FROM ubuntu:24.04
 
 RUN useradd -m steam
-RUN apt-get update && apt-get install -y --no-install-recommends lib32gcc1 wget gdb gcc-multilib expect
+RUN apt-get update && apt-get install -y --no-install-recommends wget  gcc-multilib expect
 RUN apt-get install --reinstall ca-certificates -y
 RUN apt-get upgrade -y
 
